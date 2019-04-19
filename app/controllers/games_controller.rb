@@ -29,9 +29,9 @@ class GamesController < ApplicationController
     respond_to do |format|
       if @game.save
 
-        flash[:notice] = "Welcome GUEST. Get Started!"
+        flash[:notice] = "Here you go!"
        
-        format.html { redirect_to "http://localhost:3000" }
+        format.html { redirect_to "http://localhost:3000/mainpage/story" }
         format.json { render :show, status: :created, location: @game }
       else
         format.html { render :new }
@@ -45,7 +45,7 @@ class GamesController < ApplicationController
   def update
     respond_to do |format|
       if @game.update(game_params)
-        format.html { redirect_to "http://localhost:3000" }
+        format.html { redirect_to "http://localhost:3000/mainpage/story" }
         format.json { render :show, status: :ok, location: @game }
       else
         format.html { render :edit }

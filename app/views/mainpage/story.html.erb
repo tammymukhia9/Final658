@@ -1,0 +1,44 @@
+
+
+
+	 <div class="panel-body">
+              <% @games.each do |game| %>
+                  
+                
+							<p>
+							  <strong>Noun:</strong>
+							  <%= game.noun %>
+							</p>                
+								 <p>
+							  <strong>Verb:</strong>
+							  <%= game.verb %>
+							</p>
+
+							<p>
+							  <strong>Place:</strong>
+							  <%= game.place %>
+							</p>
+
+							<p>
+							  <strong>Adjective:</strong>
+							  <%= game.adjective %>
+							</p>
+
+							                  
+                     <p class><span id="user_input"><%= game.noun%></span> did not complete anything. <span id="user_input">"<%= game.verb%></span> hard, said <span id="user_input"><%= game.noun%>.</span> This is the secret of <span id ="user_input"><%= game.adjective%></span> life." But, one fine day, just ran off to <span id = "user_input"><%= game.place%></span> and never returned</p>
+                        <p></p>
+                       </> 
+                 
+                <% end %>
+                                
+     </div>
+
+      <%= link_to 'Back to the game', mainpage_index_path %> 
+
+
+
+
+
+
+
+
